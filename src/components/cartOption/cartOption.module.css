@@ -1,7 +1,7 @@
 .option {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 15px;
 }
 
 .info {
@@ -25,4 +25,8 @@
   font-size: 12px;
   font-style: italic;
   cursor: pointer;
+}
+
+.image {
+  object-fit: contain;
 }

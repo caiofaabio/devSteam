@@ -3,7 +3,7 @@ import Image from "next/image";
 import style from "./gameCard.module.css";
 import Button from "@/components/forms/button/button";
 
-const GameCard = () => {
+const GameCard = ({ onAdd }) => {
   return (
     <div className={style.gameCard}>
       <Image
@@ -18,7 +18,7 @@ const GameCard = () => {
         <p className={style.category}>Ação, estratégia, multijogador.</p>
         <div className={style.pricing}>
           <h2 className={style.price}>R$99,90</h2>
-          <Button>Adicionar ao Carrinho</Button>
+          <Button onClick={onAdd}>Adicionar ao Carrinho</Button>
         </div>
       </div>
     </div>
