@@ -3,17 +3,17 @@ import Image from "next/image";
 import style from "./saleCard.module.css";
 import Button from "@/components/forms/button/button";
 
-const Salecard = () => {
+const Salecard = ({ image, discount, fullPrice, discountPrice }) => {
   return (
     <div className={style.saleCard}>
-      <Image src="/products/league-of-legends.jpg" width={250} height={300} />
+      <Image src={`/products/${image}`} alt={image} width={250} height={300} />
       <div className={style.info}>
         <h3 className={style.title}>Oferta Exclusiva</h3>
         <div className={style.priceCard}>
-          <div className={style.percent}>-20%</div>
+          <div className={style.percent}>-{discount}</div>
           <div className={style.price}>
-            <p className={style.fullPrice}>R$99,90</p>
-            <h4 className={style.discountPrice}>R$89,90</h4>
+            <p className={style.fullPrice}>R${fullPrice}</p>
+            <h4 className={style.discountPrice}>R${discountPrice}</h4>
           </div>
         </div>
         <Button fullWidth>Adicionar ao carrinho</Button>
@@ -23,3 +23,10 @@ const Salecard = () => {
 };
 
 export default Salecard;
+
+Salecard.defaultProps = {
+  image: "league-of-legends.jpg",
+  discount: "90%",
+  fullPrice: "199,90",
+  discountPrice: "55,90",
+};
