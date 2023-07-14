@@ -49,3 +49,14 @@
   font-weight: bold;
   color: #beeb14;
 }
+
+@media (max-width: 500px) {
+  .saleCard {
+    width: 100%;
+  }
+
+  .saleCard img {
+    width: 100%;
+    object-fit: fill;
+  }
+}

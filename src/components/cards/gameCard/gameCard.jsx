@@ -7,6 +7,7 @@ const GameCard = () => {
   return (
     <div className={style.gameCard}>
       <Image
+        className={style.image}
         src="/products/counter-strike.jpg"
         width={300}
         height={145}
